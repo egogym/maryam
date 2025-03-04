@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGO GYM - Maryam Machine Workout Program</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <style>
     :root {
         --primary-color: #ff0000;
@@ -159,6 +167,7 @@
         <a href="#day3" class="block text-white hover:text-red-500 text-2xl">Day 3: Legs</a>
         <a href="#day4" class="block text-white hover:text-red-500 text-2xl">Day 4: Upper Body</a>
         <a href="#day5" class="block text-white hover:text-red-500 text-2xl">Day 5: Lower Body</a>
+        <a href="#abs" class="block text-white hover:text-red-500 text-2xl">Ab Exercises</a>
         <a href="#guidelines" class="block text-white hover:text-red-500 text-2xl">Guidelines</a>
         <a href="https://egogym.github.io/maryam/diet.html"
            class="block text-red-500 hover:text-white font-bold mt-4 border-t border-red-800 pt-4 text-2xl">
@@ -167,136 +176,6 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuLinks = mobileMenu.querySelectorAll('a');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('open');
-            mobileMenu.classList.toggle('open');
-        });
-
-        // Close menu when a link is clicked
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('open');
-                mobileMenu.classList.remove('open');
-            });
-        });
-    });
-</script>
-
-<!-- Removed the previous fixed side navigation div --><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EGO GYM - Maryam Machine Workout Program</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<style>
-    :root {
-        --primary-color: #ff0000;
-        --secondary-color: #2d2d2d;
-        --accent-color: #404040;
-    }
-
-    .youtube-btn {
-        background: linear-gradient(45deg, #cc0000, var(--primary-color));
-        color: white;
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.25rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        font-size: 0.875rem;
-        display: inline-block;
-    }
-
-    .youtube-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-    }
-
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #ffffff;
-        background-color: #1a1a1a;
-        text-align: center;
-    }
-
-    .section-header {
-        border-bottom: 3px solid var(--primary-color);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem;
-        color: var(--primary-color);
-        text-align: center;
-    }
-
-    .workout-table {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto 2rem auto;
-        border-collapse: separate;
-        border-spacing: 0;
-        background-color: var(--secondary-color);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .workout-table th {
-        background: linear-gradient(45deg, #2d2d2d, var(--primary-color));
-        color: white;
-        font-weight: bold;
-        padding: 12px;
-        text-align: center;
-    }
-
-    .workout-table td {
-        padding: 12px;
-        border-bottom: 1px solid var(--accent-color);
-        text-align: center;
-    }
-
-    .workout-table tr:hover {
-        background-color: var(--accent-color);
-    }
-
-    section {
-        background-color: var(--secondary-color);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin: 0 auto 2rem auto;
-        max-width: 1200px;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    .program-nav {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: var(--secondary-color);
-        padding: 1rem;
-        border-radius: 8px;
-        z-index: 1000;
-        border: 1px solid var(--primary-color);
-    }
-
-    @media print {
-        .program-nav {
-            display: none;
-        }
-    }
-</style>
-</head>
-<body>
 <!-- Header -->
 <header class="py-12" id="overview">
     <h1 class="text-6xl font-bold mb-4 text-red-600">EGO GYM</h1>
@@ -350,8 +229,8 @@
         </tbody>
     </table>
 
-       <!-- Cardio and Abs Section -->
-       <div class="mt-6">
+    <!-- Cardio and Abs Section -->
+    <div class="mt-6">
         <h4 class="text-lg font-bold mb-4 text-red-500">Cardio and Core</h4>
         <table class="workout-table">
             <thead>
@@ -370,7 +249,7 @@
                 <tr>
                     <td class="text-gray-300">Abs</td>
                     <td class="text-gray-300">3 exercises</td>
-                    <td class="text-gray-300">Focus on core stability</td>
+                    <td class="text-gray-300">Choose from: Crunch, V-ups, Russian Twist (see Ab Exercises section)</td>
                 </tr>
             </tbody>
         </table>
@@ -437,7 +316,7 @@
             <tr>
                 <td class="text-gray-300">Abs</td>
                 <td class="text-gray-300">3 exercises</td>
-                <td class="text-gray-300">Focus on core stability</td>
+                <td class="text-gray-300">Choose from: Reverse Crunch, Plank, V-sit (see Ab Exercises section)</td>
             </tr>
         </tbody>
     </table>
@@ -476,6 +355,18 @@
             <td><a href="https://www.youtube.com/watch?v=2Ew-k3SLrNM" target="_blank" class="youtube-btn">Watch</a></td>
         </tr>
         <tr>
+            <td class="text-gray-300">Hip Abduction Machine</td>
+            <td class="text-gray-300">3 x 12</td>
+            <td class="text-gray-300">Focus on outer thighs</td>
+            <td><a href="https://www.youtube.com/watch?v=9SA3HaPoJ4M" target="_blank" class="youtube-btn">Watch</a></td>
+        </tr>
+        <tr>
+            <td class="text-gray-300">Hip Adduction Machine</td>
+            <td class="text-gray-300">3 x 12</td>
+            <td class="text-gray-300">Focus on inner thighs</td>
+            <td><a href="https://www.youtube.com/watch?v=d4MSLXUOAEA" target="_blank" class="youtube-btn">Watch</a></td>
+        </tr>
+        <tr>
             <td class="text-gray-300">Standing Calf Raises</td>
             <td class="text-gray-300">3 x 12</td>
             <td class="text-gray-300">Full extension at top</td>
@@ -484,6 +375,32 @@
     </tbody>
 </table>
 
+<!-- Cardio and Abs Section -->
+<div class="mt-6">
+    <h4 class="text-lg font-bold mb-4 text-red-500">Cardio and Core</h4>
+    <table class="workout-table">
+        <thead>
+            <tr>
+                <th>Activity</th>
+                <th>Duration/Sets</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-gray-300">Cardio</td>
+                <td class="text-gray-300">30 minutes</td>
+                <td class="text-gray-300">Choose: Treadmill, Elliptical, or Stationary Bike</td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">Abs</td>
+                <td class="text-gray-300">3 exercises</td>
+                <td class="text-gray-300">Choose from: V-ups, Russian Twist, Plank (see Ab Exercises section)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
 
 <!-- Day 4: Upper Body -->
 <section id="day4">
@@ -551,7 +468,7 @@
                 <tr>
                     <td class="text-gray-300">Abs</td>
                     <td class="text-gray-300">3 exercises</td>
-                    <td class="text-gray-300">Focus on core stability</td>
+                    <td class="text-gray-300">Choose from: Crunch, Reverse Crunch, V-sit (see Ab Exercises section)</td>
                 </tr>
             </tbody>
         </table>
@@ -590,6 +507,18 @@
                 <td><a href="https://www.youtube.com/watch?v=2Ew-k3SLrNM" target="_blank" class="youtube-btn">Watch</a></td>
             </tr>
             <tr>
+                <td class="text-gray-300">Hip Abduction Machine</td>
+                <td class="text-gray-300">3 x 12</td>
+                <td class="text-gray-300">Focus on outer thighs</td>
+                <td><a href="https://www.youtube.com/watch?v=9SA3HaPoJ4M" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">Hip Adduction Machine</td>
+                <td class="text-gray-300">3 x 12</td>
+                <td class="text-gray-300">Focus on inner thighs</td>
+                <td><a href="https://www.youtube.com/watch?v=d4MSLXUOAEA" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
                 <td class="text-gray-300">Seated Calf Raises</td>
                 <td class="text-gray-300">3 x 12</td>
                 <td class="text-gray-300">Full contraction at top</td>
@@ -618,14 +547,65 @@
                 <tr>
                     <td class="text-gray-300">Abs</td>
                     <td class="text-gray-300">3 exercises</td>
-                    <td class="text-gray-300">Focus on core stability</td>
+                    <td class="text-gray-300">Choose from: Russian Twist, V-ups, Plank (see Ab Exercises section)</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </section>
 
-<!-- Guidelines Section -->
+<!-- Ab Exercises Section -->
+<section id="abs">
+    <h2 class="text-2xl font-bold mb-4 section-header">Ab Exercises</h2>
+    <table class="workout-table">
+        <thead>
+            <tr>
+                <th>Exercise</th>
+                <th>Sets x Reps</th>
+                <th>Notes</th>
+                <th>Tutorial</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-gray-300">Crunch</td>
+                <td class="text-gray-300">3 x 15</td>
+                <td class="text-gray-300">Focus on upper abs</td>
+                <td><a href="https://www.youtube.com/watch?v=NGRKFMKhF8s" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">Reverse Crunch</td>
+                <td class="text-gray-300">3 x 15</td>
+                <td class="text-gray-300">Focus on lower abs</td>
+                <td><a href="https://www.youtube.com/watch?v=7rRWy7-Gokg" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">V-ups</td>
+                <td class="text-gray-300">3 x 12</td>
+                <td class="text-gray-300">Complete core engagement</td>
+                <td><a href="https://www.youtube.com/watch?v=iP2fjvG0g3w" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">Plank</td>
+                <td class="text-gray-300">3 x 30-60 sec</td>
+                <td class="text-gray-300">Maintain straight body line</td>
+                <td><a href="https://www.youtube.com/watch?v=pSHjTRCQxIw" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">V-sit</td>
+                <td class="text-gray-300">3 x 30 sec</td>
+                <td class="text-gray-300">Keep back straight</td>
+                <td><a href="https://www.youtube.com/watch?v=9T6ynY0G6Vk" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+            <tr>
+                <td class="text-gray-300">Russian Twist</td>
+                <td class="text-gray-300">3 x 20 (10 each side)</td>
+                <td class="text-gray-300">Rotate fully to each side</td>
+                <td><a href="https://www.youtube.com/watch?v=wkD8rjkodUI" target="_blank" class="youtube-btn">Watch</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Guidelines Section -->
 <section id="guidelines">
     <h2 class="text-2xl font-bold mb-4 section-header">Training Guidelines</h2>
     <div class="grid md:grid-cols-2 gap-6">
